@@ -1,0 +1,78 @@
+# all users
+GET http://localhost:3000/users
+
+### all films
+GET http://localhost:3000/films
+
+### delete film
+DELETE http://localhost:3000/films/1
+
+### one film
+GET http://localhost:3000/films/3
+
+### one user
+GET http://localhost:3000/users/3
+
+### get films of a specific genre (not working)
+GET http://localhost:3000/films/genre
+
+### get one film's genre
+GET http://localhost:3000/films/2/genre
+
+### create user
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+    "name": "Liquid Snake",
+    "email": "lalelulelo@gmail.com"
+}
+
+###
+
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+    "name": "Solid Snake",
+    "email": "foxdie@gmail.com"
+}
+
+###
+
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+    "name": "Big Boss",
+    "email": "keptyouwaitinghuh@gmail.com"
+}
+
+###
+
+POST http://localhost:3000/users
+content-type: application/json
+{
+    "name": "Venom Snake",
+    "email": "diamonddogs@gmail.com"
+}
+
+###
+
+### update user
+PUT  http://localhost:3000/users/1
+content-type: application/json
+
+### user's movies watched
+GET http://localhost:3000/users/1/movies
+
+### adds movies watched by user
+POST http://localhost:3000/users/1/movies/1
+
+### update rating (not working)
+PUT http://localhost:3000/films/users/2
+content-type: application/json
+
+{
+    "rating": 7
+}
